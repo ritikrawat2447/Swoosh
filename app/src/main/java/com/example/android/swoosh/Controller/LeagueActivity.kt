@@ -1,11 +1,12 @@
-package com.example.android.swoosh
+package com.example.android.swoosh.Controller
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import android.widget.ToggleButton
-import com.example.android.swoosh.databinding.ActivityMainBinding
+import com.example.android.swoosh.EXTRA_LEAGUE
+import com.example.android.swoosh.R
 
 
 class LeagueActivity : BaseActivity() {

@@ -1,9 +1,9 @@
-package com.example.android.swoosh
+package com.example.android.swoosh.Controller
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.android.swoosh.R
 
 class MainActivity : BaseActivity() {
 
@@ -14,7 +14,7 @@ class MainActivity : BaseActivity() {
 
         val btn : Button = findViewById(R.id.getStartedBtn)
         btn.setOnClickListener {
-            val leagueIntent = Intent(this,LeagueActivity::class.java)
+            val leagueIntent = Intent(this, LeagueActivity::class.java)
             startActivity(leagueIntent)
         }
     }
