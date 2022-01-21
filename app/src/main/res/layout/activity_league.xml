@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <ToggleButton
-            android:id="@+id/toggleButton6"
+            android:id="@+id/MensLeagueButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/swoosh_toggle"
@@ -68,7 +68,7 @@
             android:textOn="@string/Mens" />
 
         <ToggleButton
-            android:id="@+id/toggleButton7"
+            android:id="@+id/WomensLeagueButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -81,7 +81,7 @@
             android:textOn="@string/women" />
 
         <ToggleButton
-            android:id="@+id/toggleButton8"
+            android:id="@+id/CoEdLeagueButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/swoosh_toggle"
