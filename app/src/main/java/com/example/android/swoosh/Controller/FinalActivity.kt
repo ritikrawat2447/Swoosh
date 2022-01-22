@@ -2,20 +2,18 @@ package com.example.android.swoosh.Controller
 
 import android.os.Bundle
 import android.widget.TextView
-import com.example.android.swoosh.EXTRA_LEAGUE
-import com.example.android.swoosh.EXTRA_SKILL
+import com.example.android.swoosh.EXTRA_PLAYER
+import com.example.android.swoosh.Model.Player
 import com.example.android.swoosh.R
-import org.w3c.dom.Text
 
 class FinalActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_final)
 
-        val league = intent.getStringExtra(EXTRA_LEAGUE)
-        val skill = intent.getStringExtra(EXTRA_SKILL)
+        val player = intent.getParcelableExtra<Player>(EXTRA_PLAYER)!!
 
         val txt : TextView = findViewById(R.id.searchLeagueTxt)
-        txt.text = "Looking for $league $skill league near you..."
+        txt.text = "Looking for ${player.league} ${player.skill} league near you..."
     }
 }

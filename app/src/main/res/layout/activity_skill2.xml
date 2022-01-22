@@ -10,15 +10,15 @@
         android:id="@+id/imageView4"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/background_image"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/beginnerballerbg"
-        android:contentDescription="@string/background_image" />
+        app:srcCompat="@drawable/beginnerballerbg" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -36,13 +36,13 @@
         android:layout_width="160dp"
         android:layout_height="37dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/i_am_a"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -50,36 +50,40 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5">
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.031">
 
         <ToggleButton
             android:id="@+id/beginnerSkillBtn"
-            android:layout_width="145dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="20dp"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
             android:text="@string/beginner"
             android:textColor="@color/white"
             android:textOff="@string/beginner"
-            android:textOn="@string/beginner" />
+            android:textOn="@string/beginner"
+            android:textSize="18sp" />
 
         <ToggleButton
             android:id="@+id/ballerSkillBtn"
-            android:layout_width="145dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
             android:text="@string/baller"
             android:textColor="@color/white"
             android:textOff="@string/baller"
-            android:textOn="@string/baller" />
+            android:textOn="@string/baller"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <Button

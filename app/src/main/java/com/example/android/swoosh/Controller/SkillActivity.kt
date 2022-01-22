@@ -5,19 +5,17 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import android.widget.ToggleButton
-import com.example.android.swoosh.EXTRA_LEAGUE
-import com.example.android.swoosh.EXTRA_SKILL
+import com.example.android.swoosh.EXTRA_PLAYER
+import com.example.android.swoosh.Model.Player
 import com.example.android.swoosh.R
 
 class SkillActivity : BaseActivity() {
 
-    var league = ""
-    var isSelected = ""
+    lateinit var player : Player
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skill2)
-        league = intent.getStringExtra(EXTRA_LEAGUE).toString()
-        println(league)
+        player = intent.getParcelableExtra(EXTRA_PLAYER)!!
 
         val beginerBtn : ToggleButton = findViewById(R.id.beginnerSkillBtn)
         val ballerBtn : ToggleButton = findViewById(R.id.ballerSkillBtn)
@@ -25,34 +23,22 @@ class SkillActivity : BaseActivity() {
 
         beginerBtn.setOnClickListener{
             ballerBtn.isChecked = false
-            isSelected = "Beginner"
+            player.skill = "Beginner"
         }
         ballerBtn.setOnClickListener{
             beginerBtn.isChecked = false
-            isSelected = "Baller"
+            player.skill = "Baller"
         }
 
         onskillClicked.setOnClickListener{
-            if( isSelected != ""){
+            if( player.skill != ""){
                 val finishActivity = Intent(this, FinalActivity()::class.java)
-                finishActivity.putExtra(EXTRA_LEAGUE,league)
-                finishActivity.putExtra(EXTRA_SKILL,isSelected)
+                finishActivity.putExtra(EXTRA_PLAYER,player)
                 startActivity(finishActivity)
             }else{
                 Toast.makeText(this , "Please select a skill level" , Toast.LENGTH_SHORT).show()
             }
         }
     }
-
-//    fun onSkillFinishClicked(){
-//        if( isSelected != ""){
-//            val finishActivity = Intent(this, FinalActivity()::class.java)
-//            finishActivity.putExtra(EXTRA_LEAGUE,league)
-//            finishActivity.putExtra(EXTRA_SKILL,isSelected)
-//            startActivity(finishActivity)
-//        }else{
-//            Toast.makeText(this , "Please select a skill level" , Toast.LENGTH_SHORT).show()
-//        }
-//    }
 
 }
